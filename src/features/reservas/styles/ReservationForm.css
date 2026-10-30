@@ -1,0 +1,292 @@
+
+/* =========================================
+   CANTINHO DA SELVA
+   FORMULARIO DE RESERVAS
+========================================= */
+
+.reservation-form {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 55px;
+  padding: 48px;
+  border: 1px solid #e1e7dc;
+  border-radius: 24px;
+  background: #fffdf9;
+  box-shadow:
+    0 15px 45px rgba(32, 61, 39, 0.05),
+    0 3px 12px rgba(32, 61, 39, 0.03);
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.reservation-form__header {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.reservation-form__eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #a28a64;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.reservation-form__header h2 {
+  margin: 0 0 14px;
+  color: #294b34;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.reservation-form__header p {
+  max-width: 570px;
+  margin: 0 auto;
+  color: #798679;
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.reservation-form__fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: end;
+}
+
+.reservation-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.reservation-form__field label {
+  color: #405b46;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.reservation-form__field input,
+.reservation-form__field select {
+  width: 100%;
+  height: 54px;
+  min-width: 0;
+  padding: 0 16px;
+
+  border: 1px solid #dce5d9;
+  border-radius: 12px;
+
+  background: #f8faf6;
+  color: #314b38;
+
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 500;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.reservation-form__field input:hover,
+.reservation-form__field select:hover {
+  border-color: #a8c0a8;
+}
+
+.reservation-form__field input:focus,
+.reservation-form__field select:focus {
+  border-color: #497c53;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(73, 124, 83, 0.1);
+}
+
+.reservation-form__field select {
+  cursor: pointer;
+}
+
+.reservation-form__field input[type='date'] {
+  color-scheme: light;
+  cursor: pointer;
+}
+
+/* =========================================
+   MENSAJES DE ERROR
+========================================= */
+
+.reservation-form__error {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 13px 16px;
+  border: 1px solid #eac6c1;
+  border-radius: 10px;
+  background: #fff3f1;
+  color: #a33e36;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* =========================================
+   BOTÓN PRINCIPAL
+========================================= */
+
+.reservation-form__submit {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 100%;
+  min-height: 56px;
+  margin-top: 10px;
+  padding: 14px 25px;
+
+  border: 1px solid #315c3a;
+  border-radius: 12px;
+
+  background: #315c3a;
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 0.96rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.reservation-form__submit:hover {
+  border-color: #234a2c;
+  background: #234a2c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(35, 74, 44, 0.17);
+}
+
+.reservation-form__submit span {
+  font-size: 1.3rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.reservation-form__submit:hover span {
+  transform: translateX(4px);
+}
+
+.reservation-form__submit:focus-visible {
+  outline: 3px solid #c7dca9;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   NOTA INFERIOR
+========================================= */
+
+.reservation-form__note {
+  max-width: 650px;
+  margin: 22px auto 0;
+  color: #879187;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+  .reservation-form {
+    padding: 36px 28px;
+  }
+
+  .reservation-form__fields {
+    gap: 15px;
+  }
+}
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 767px) {
+  .reservation-form {
+    margin-bottom: 40px;
+    padding: 32px 20px;
+    border-radius: 18px;
+  }
+
+  .reservation-form__header {
+    margin-bottom: 28px;
+  }
+
+  .reservation-form__header h2 {
+    font-size: clamp(1.9rem, 7vw, 2.5rem);
+  }
+
+  .reservation-form__header p {
+    font-size: 0.9rem;
+  }
+
+  .reservation-form__eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 1.8px;
+  }
+
+  .reservation-form__fields {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .reservation-form__field input,
+  .reservation-form__field select {
+    height: 52px;
+    font-size: 1rem;
+  }
+
+  .reservation-form__submit {
+    grid-column: 1;
+    margin-top: 5px;
+  }
+
+  .reservation-form__note {
+    font-size: 0.78rem;
+  }
+}
+
+/* =========================================
+   MOVIMIENTO REDUCIDO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .reservation-form__field input,
+  .reservation-form__field select,
+  .reservation-form__submit,
+  .reservation-form__submit span {
+    transition: none;
+  }
+
+  .reservation-form__submit:hover,
+  .reservation-form__submit:hover span {
+    transform: none;
+  }
+}

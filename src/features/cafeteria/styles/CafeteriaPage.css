@@ -1,0 +1,903 @@
+
+/* =========================================
+   CANTINHO DA SELVA
+   CAFETERÍA & RESTAURANTE
+========================================= */
+
+/* =========================================
+   PÁGINA GENERAL
+========================================= */
+
+.cafeteria-page {
+  width: 100%;
+  overflow-x: clip;
+  background: #faf8f3;
+  color: #293d2f;
+}
+
+.cafeteria-page .container {
+  width: min(1200px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.cafeteria-page__hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 650px;
+  padding: 110px 0;
+  isolation: isolate;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(18, 39, 26, 0.94) 0%,
+      rgba(24, 47, 32, 0.84) 42%,
+      rgba(24, 47, 32, 0.3) 100%
+    ),
+    linear-gradient(135deg, #23432e, #527457);
+}
+
+.cafeteria-page__hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    circle at 85% 30%,
+    rgba(195, 215, 163, 0.14),
+    transparent 35%
+  );
+  pointer-events: none;
+}
+
+.cafeteria-page__hero-content {
+  position: relative;
+  max-width: 710px;
+}
+
+.cafeteria-page__eyebrow {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #d8c8a4;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.7;
+}
+
+.cafeteria-page__hero h1 {
+  margin: 0 0 28px;
+  color: #fffdf7;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3.2rem, 6vw, 5.7rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+}
+
+.cafeteria-page__hero p {
+  max-width: 540px;
+  margin: 0;
+  color: #e1e8dc;
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+/* =========================================
+   BOTONES DEL HERO
+========================================= */
+
+.cafeteria-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.cafeteria-page__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 14px 26px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.cafeteria-page__button:hover {
+  transform: translateY(-2px);
+}
+
+.cafeteria-page__button--primary {
+  background: #e7d7b2;
+  color: #29402e;
+}
+
+.cafeteria-page__button--primary:hover {
+  background: #f3e6c9;
+  color: #29402e;
+}
+
+.cafeteria-page__button--secondary {
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.cafeteria-page__button--secondary:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+/* =========================================
+   INTRODUCCIÓN
+========================================= */
+
+.cafeteria-page__intro {
+  padding: 110px 0 105px;
+  background: #fffdf9;
+  text-align: center;
+}
+
+.cafeteria-page__intro .container {
+  max-width: 800px;
+}
+
+.cafeteria-page__section-label {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #9b835d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+
+.cafeteria-page__intro h2 {
+  margin: 0 0 25px;
+  color: #2c5035;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.9rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.cafeteria-page__intro p {
+  max-width: 660px;
+  margin: 0 auto;
+  color: #748073;
+  font-size: 1.05rem;
+  line-height: 2;
+}
+
+/* =========================================
+   SECCIÓN DE RESERVAS
+========================================= */
+
+.cafeteria-page__reservations {
+  position: relative;
+  padding: 100px 0 110px;
+  background: #f5f6f0;
+  color: #293e30;
+  text-align: left;
+}
+
+.cafeteria-page__reservations .container {
+  width: min(1200px, calc(100% - 40px));
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* =========================================
+   MAPA DE RESERVAS
+========================================= */
+
+.cafeteria-page__reservation-map {
+  width: 100%;
+  scroll-margin-top: 100px;
+}
+
+/*
+   El plano, sus mesas, filtros y leyenda
+   se diseñan en TableMap.css.
+*/
+
+/* =========================================
+   CONTENEDOR DEL FORMULARIO
+========================================= */
+
+.cafeteria-page__reservation-details {
+  margin-top: 55px;
+  scroll-margin-top: 100px;
+}
+
+/* =========================================
+   INFORMACIÓN DE LA MESA ELEGIDA
+========================================= */
+
+.cafeteria-page__selected-info {
+  max-width: 850px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.cafeteria-page__selected-title {
+  margin: 0 0 12px;
+  color: #294b34;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.cafeteria-page__selected-description {
+  margin: 0 0 20px;
+  color: #738273;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   BOTÓN CAMBIAR MESA
+========================================= */
+
+.cafeteria-page__change-table {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 22px;
+  border: 1px solid #315c3a;
+  border-radius: 30px;
+  background: transparent;
+  color: #315c3a;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cafeteria-page__change-table:hover {
+  background: #315c3a;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   RESUMEN DE LA RESERVA
+========================================= */
+
+.cafeteria-page__reservation-summary {
+  max-width: 850px;
+  margin: 0 auto 35px;
+  padding: 35px 30px;
+  scroll-margin-top: 100px;
+  border: 1px solid #d9e7d6;
+  border-radius: 18px;
+  background: #edf5e9;
+  text-align: center;
+}
+
+.cafeteria-page__summary-title {
+  margin: 0 0 15px;
+  color: #294b34;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.cafeteria-page__summary-details {
+  margin: 0;
+  color: #516c56;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.9;
+}
+
+.cafeteria-page__summary-note {
+  max-width: 560px;
+  margin: 18px auto 0;
+  color: #728372;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   AVISO DE DEMOSTRACIÓN
+========================================= */
+
+.cafeteria-page__reservation-notice {
+  max-width: 680px;
+  margin: 28px auto 0;
+  padding: 0 15px;
+  color: #7d877b;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* =========================================
+   VOLVER AL INICIO
+========================================= */
+
+.cafeteria-page__back {
+  padding: 30px 20px;
+  background: #fffdf9;
+  text-align: center;
+}
+
+.cafeteria-page__back a {
+  color: #315c3a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cafeteria-page__back a:hover {
+  color: #648a5e;
+}
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+.cafeteria-page a:focus-visible,
+.cafeteria-page__change-table:focus-visible {
+  outline: 3px solid #a4c79b;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+  .cafeteria-page__hero {
+    min-height: 570px;
+    padding: 90px 0;
+  }
+
+  .cafeteria-page__intro {
+    padding: 85px 0;
+  }
+
+  .cafeteria-page__reservations {
+    padding: 80px 0 90px;
+  }
+
+  .cafeteria-page__reservation-details {
+    margin-top: 45px;
+  }
+}
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 767px) {
+  .cafeteria-page .container {
+    width: min(100% - 32px, 1200px);
+  }
+
+  /* HERO */
+
+  .cafeteria-page__hero {
+    min-height: 570px;
+    padding: 85px 0;
+    background: linear-gradient(
+      135deg,
+      rgba(18, 39, 26, 0.96),
+      rgba(35, 67, 46, 0.88)
+    );
+  }
+
+  .cafeteria-page__eyebrow {
+    font-size: 0.66rem;
+    letter-spacing: 2px;
+  }
+
+  .cafeteria-page__hero h1 {
+    font-size: clamp(2.8rem, 11vw, 4rem);
+    letter-spacing: -1px;
+  }
+
+  .cafeteria-page__hero p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .cafeteria-page__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cafeteria-page__button {
+    width: 100%;
+  }
+
+  /* INTRODUCCIÓN */
+
+  .cafeteria-page__intro {
+    padding: 70px 0;
+  }
+
+  .cafeteria-page__intro p {
+    font-size: 0.96rem;
+    line-height: 1.85;
+  }
+
+  /* RESERVAS */
+
+  .cafeteria-page__reservations {
+    padding: 65px 0 75px;
+  }
+
+  .cafeteria-page__reservations .container {
+    width: calc(100% - 32px);
+  }
+
+  .cafeteria-page__reservation-details {
+    margin-top: 35px;
+  }
+
+  /* MESA SELECCIONADA */
+
+  .cafeteria-page__selected-title {
+    font-size: 1.8rem;
+  }
+
+  .cafeteria-page__selected-description {
+    font-size: 0.88rem;
+  }
+
+  /* RESUMEN */
+
+  .cafeteria-page__reservation-summary {
+    padding: 28px 20px;
+    border-radius: 15px;
+  }
+
+  .cafeteria-page__summary-details {
+    font-size: 0.92rem;
+  }
+
+  .cafeteria-page__summary-note {
+    font-size: 0.82rem;
+  }
+
+  /* AVISO */
+
+  .cafeteria-page__reservation-notice {
+    margin-top: 22px;
+    font-size: 0.78rem;
+  }
+}
+
+/* =========================================
+   MOVIMIENTO REDUCIDO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .cafeteria-page__button,
+  .cafeteria-page__change-table,
+  .cafeteria-page__back a {
+    transition: none;
+  }
+
+  .cafeteria-page__button:hover,
+  .cafeteria-page__change-table:hover {
+    transform: none;
+  }
+}
+
+/* =========================================
+   EXPERIENCIA DE RESERVA
+   NUEVO DISEÑO
+========================================= */
+
+.cafeteria-page__experience {
+  width: min(850px, 100%);
+  margin: 48px auto 36px;
+  scroll-margin-top: 100px;
+  display: grid;
+  gap: 22px;
+}
+
+/* =========================================
+   TARJETA VERDE DE RESERVA
+========================================= */
+
+.cafeteria-page__booking-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(26px, 5vw, 44px);
+  border-radius: 25px;
+  background: linear-gradient(
+    145deg,
+    #294f39 0%,
+    #1e402e 100%
+  );
+  box-shadow: 0 18px 42px rgba(30, 64, 46, 0.14);
+}
+
+.cafeteria-page__booking-card::before {
+  content: '';
+  position: absolute;
+  top: -110px;
+  right: -95px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(192, 220, 177, 0.13),
+    transparent 72%
+  );
+  pointer-events: none;
+}
+
+.cafeteria-page__booking-header {
+  position: relative;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.cafeteria-page__booking-eyebrow {
+  display: block;
+  margin-bottom: 13px;
+  color: #d6c49b;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.cafeteria-page__booking-title {
+  margin: 0 0 10px;
+  color: #fffdf7;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.18;
+}
+
+.cafeteria-page__booking-subtitle {
+  margin: 0;
+  color: #d9e8d8;
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   DATOS DE LA RESERVA
+========================================= */
+
+.cafeteria-page__booking-details {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 18px;
+  padding: clamp(22px, 4vw, 34px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 18px;
+  background: #fffdf9;
+  box-shadow: 0 8px 24px rgba(12, 32, 19, 0.08);
+}
+
+.cafeteria-page__booking-detail {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+.cafeteria-page__booking-icon {
+  display: grid;
+  flex: 0 0 45px;
+  width: 45px;
+  height: 45px;
+  place-items: center;
+  border-radius: 13px;
+  background: #edf3e9;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.cafeteria-page__booking-detail > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.cafeteria-page__booking-label {
+  color: #899486;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.cafeteria-page__booking-detail strong {
+  color: #294b34;
+  font-size: clamp(0.88rem, 2vw, 1.04rem);
+  font-weight: 650;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.cafeteria-page__booking-disclaimer {
+  position: relative;
+  margin: 19px 0 0;
+  color: #c8dbc7;
+  font-size: 0.76rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* =========================================
+   INVITACIÓN GASTRONÓMICA
+========================================= */
+
+.cafeteria-page__dining-invitation {
+  padding: clamp(24px, 4vw, 35px);
+  border: 1px solid #e1e8dc;
+  border-radius: 22px;
+  background: #fffdf9;
+  box-shadow: 0 10px 28px rgba(32, 63, 40, 0.045);
+}
+
+.cafeteria-page__dining-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cafeteria-page__dining-icon {
+  display: grid;
+  flex: 0 0 66px;
+  width: 66px;
+  height: 66px;
+  place-items: center;
+  border-radius: 18px;
+  background: #edf3e9;
+  font-size: 1.85rem;
+  line-height: 1;
+}
+
+.cafeteria-page__dining-intro h3 {
+  margin: 1px 0 10px;
+  color: #294b34;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.cafeteria-page__dining-intro p {
+  max-width: 540px;
+  margin: 0;
+  color: #718171;
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+/* =========================================
+   BOTONES DE INVITACIÓN
+========================================= */
+
+.cafeteria-page__dining-actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.cafeteria-page__dining-primary,
+.cafeteria-page__dining-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 54px;
+  padding: 14px 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 650;
+  line-height: 1.35;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cafeteria-page__dining-primary {
+  background: #315c3a;
+  color: #fff;
+}
+
+.cafeteria-page__dining-primary:hover {
+  background: #24482d;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.cafeteria-page__dining-secondary {
+  border-color: #b7cbb2;
+  background: #fffdf9;
+  color: #315c3a;
+}
+
+.cafeteria-page__dining-secondary:hover {
+  border-color: #7d9f76;
+  background: #edf3e9;
+  color: #24482d;
+  transform: translateY(-2px);
+}
+
+.cafeteria-page__dining-primary:focus-visible,
+.cafeteria-page__dining-secondary:focus-visible {
+  outline: 3px solid #a4c79b;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   PLATOS EN EL RESUMEN FINAL
+========================================= */
+
+.cafeteria-page__summary-menu {
+  margin: 25px auto 0;
+  padding: 24px;
+  border: 1px solid #d8e5d4;
+  border-radius: 15px;
+  background: #fffdf9;
+  text-align: left;
+}
+
+.cafeteria-page__summary-menu h4 {
+  margin: 0 0 17px;
+  color: #294b34;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.cafeteria-page__summary-menu ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cafeteria-page__summary-menu li,
+.cafeteria-page__summary-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 15px;
+  color: #536b56;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cafeteria-page__summary-menu li strong,
+.cafeteria-page__summary-total strong {
+  color: #294b34;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.cafeteria-page__summary-total {
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid #d8e5d4;
+  font-weight: 700;
+}
+
+/* =========================================
+   RESPONSIVE · NUEVAS TARJETAS
+========================================= */
+
+@media (max-width: 767px) {
+  .cafeteria-page__experience {
+    margin-top: 35px;
+    gap: 17px;
+  }
+
+  .cafeteria-page__booking-card {
+    padding: 25px 18px;
+    border-radius: 20px;
+  }
+
+  .cafeteria-page__booking-details {
+    gap: 23px 13px;
+    padding: 22px 15px;
+  }
+
+  .cafeteria-page__booking-detail {
+    align-items: flex-start;
+    gap: 9px;
+  }
+
+  .cafeteria-page__booking-icon {
+    flex-basis: 35px;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 1.05rem;
+  }
+
+  .cafeteria-page__booking-label {
+    font-size: 0.61rem;
+    letter-spacing: 0.8px;
+  }
+
+  .cafeteria-page__booking-detail strong {
+    font-size: 0.85rem;
+  }
+
+  .cafeteria-page__dining-invitation {
+    padding: 23px 19px;
+  }
+
+  .cafeteria-page__dining-intro {
+    gap: 13px;
+  }
+
+  .cafeteria-page__dining-icon {
+    flex-basis: 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    font-size: 1.45rem;
+  }
+
+  .cafeteria-page__dining-intro p {
+    font-size: 0.87rem;
+  }
+
+  .cafeteria-page__summary-menu {
+    padding: 18px 15px;
+  }
+}
+
+@media (max-width: 390px) {
+  .cafeteria-page__booking-details {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cafeteria-page__dining-primary,
+  .cafeteria-page__dining-secondary {
+    transition: none;
+  }
+
+  .cafeteria-page__dining-primary:hover,
+  .cafeteria-page__dining-secondary:hover {
+    transform: none;
+  }
+}

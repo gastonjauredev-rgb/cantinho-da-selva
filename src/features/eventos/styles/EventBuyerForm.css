@@ -1,0 +1,287 @@
+
+/* =========================================
+   CANTINHO DA SELVA
+   FORMULARIO DEL COMPRADOR
+========================================= */
+
+.event-buyer {
+  width: 100%;
+  padding: 36px;
+  border: 1px solid #e3e9df;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 12px 40px rgba(25, 54, 33, 0.06);
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.event-buyer__header {
+  margin-bottom: 32px;
+}
+
+.event-buyer__eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #6e956b;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.event-buyer__header h2 {
+  margin: 0 0 14px;
+  color: #1d402c;
+  font-size: clamp(1.65rem, 3vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.event-buyer__header p {
+  max-width: 570px;
+  margin: 0;
+  color: #718075;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.event-buyer__form {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.event-buyer__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.event-buyer__field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 9px;
+}
+
+.event-buyer__field label {
+  color: #2d4c36;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.event-buyer__field input {
+  width: 100%;
+  min-height: 52px;
+  padding: 13px 16px;
+  border: 1px solid #dce5d8;
+  border-radius: 12px;
+  outline: none;
+  background: #fbfcf9;
+  color: #263e2d;
+  font: inherit;
+  font-size: 0.94rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.event-buyer__field input::placeholder {
+  color: #a0aaa0;
+}
+
+.event-buyer__field input:hover {
+  border-color: #b4c7b1;
+}
+
+.event-buyer__field input:focus {
+  border-color: #42754d;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(66, 117, 77, 0.11);
+}
+
+.event-buyer__field input[aria-invalid="true"] {
+  border-color: #bd655a;
+  background: #fffafa;
+}
+
+.event-buyer__field input[aria-invalid="true"]:focus {
+  box-shadow: 0 0 0 4px rgba(189, 101, 90, 0.12);
+}
+
+/* =========================================
+   MENSAJES DE ERROR
+========================================= */
+
+.event-buyer__error {
+  display: block;
+  color: #a5483d;
+  font-size: 0.79rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* =========================================
+   AVISO DE CONFIRMACIÓN
+========================================= */
+
+.event-buyer__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 5px;
+  padding: 20px;
+  border: 1px solid #dce8d8;
+  border-radius: 14px;
+  background: #f2f7ef;
+}
+
+.event-buyer__notice > span {
+  display: flex;
+  flex: 0 0 36px;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e0ecda;
+  color: #35643d;
+  font-size: 1.2rem;
+}
+
+.event-buyer__notice p {
+  margin: 0;
+  color: #607765;
+  font-size: 0.85rem;
+  line-height: 1.75;
+}
+
+/* =========================================
+   BOTÓN CONTINUAR
+========================================= */
+
+.event-buyer__submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+  min-height: 55px;
+  padding: 15px 22px;
+  border: 0;
+  border-radius: 12px;
+  background: #315c3a;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.event-buyer__submit:hover {
+  background: #42774c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(49, 92, 58, 0.16);
+}
+
+.event-buyer__submit:active {
+  transform: translateY(0);
+}
+
+.event-buyer__submit:focus-visible {
+  outline: 3px solid #8daf82;
+  outline-offset: 4px;
+}
+
+.event-buyer__submit > span {
+  font-size: 1.35rem;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.event-buyer__submit:hover > span {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .event-buyer {
+    padding: 28px;
+    border-radius: 20px;
+  }
+
+  .event-buyer__header {
+    margin-bottom: 27px;
+  }
+
+  .event-buyer__form {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .event-buyer {
+    padding: 23px 18px;
+    border-radius: 17px;
+  }
+
+  .event-buyer__row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .event-buyer__header h2 {
+    font-size: 1.7rem;
+  }
+
+  .event-buyer__field input {
+    min-height: 50px;
+  }
+
+  .event-buyer__notice {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .event-buyer__notice > span {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .event-buyer__submit {
+    padding: 15px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-buyer__field input,
+  .event-buyer__submit,
+  .event-buyer__submit > span {
+    transition: none;
+  }
+
+  .event-buyer__submit:hover,
+  .event-buyer__submit:active {
+    transform: none;
+  }
+
+  .event-buyer__submit:hover > span {
+    transform: none;
+  }
+}

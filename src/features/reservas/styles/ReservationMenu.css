@@ -1,0 +1,517 @@
+
+/* =========================================
+   CANTINHO DA SELVA
+   PLANIFICACIÓN ANTICIPADA DEL MENÚ
+========================================= */
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.reservation-menu {
+  width: min(950px, 100%);
+  margin: 55px auto;
+  padding: clamp(24px, 5vw, 55px);
+
+  background: #fffdf9;
+  border: 1px solid #e4e9dd;
+  border-radius: 24px;
+
+  box-shadow:
+    0 16px 45px rgba(32, 63, 40, 0.05),
+    0 3px 12px rgba(32, 63, 40, 0.03);
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.reservation-menu__header {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.reservation-menu__eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+
+  color: #a0835d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.reservation-menu__title {
+  margin: 0 0 18px;
+
+  color: #294b34;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.reservation-menu__description {
+  max-width: 530px;
+  margin: 0 auto 24px;
+
+  color: #788477;
+  font-size: 0.96rem;
+  line-height: 1.85;
+}
+
+.reservation-menu__service {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 20px;
+
+  background: #edf3e9;
+  border: 1px solid #dce8d6;
+  border-radius: 50px;
+
+  color: #426449;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* =========================================
+   CATEGORÍAS
+========================================= */
+
+.reservation-menu__categories {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.reservation-menu__category {
+  min-width: 0;
+}
+
+.reservation-menu__category-header {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e7ece3;
+}
+
+.reservation-menu__category-header h3 {
+  margin: 0 0 8px;
+
+  color: #31583b;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 400;
+}
+
+.reservation-menu__category-header p {
+  margin: 0;
+
+  color: #879184;
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   LISTA DE PRODUCTOS
+========================================= */
+
+.reservation-menu__products {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.reservation-menu__product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  padding: 22px 24px;
+
+  background: #fafbf7;
+  border: 1px solid #e8ede4;
+  border-radius: 16px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.reservation-menu__product:hover {
+  background: #f5f8f1;
+  border-color: #cbdcc7;
+
+  box-shadow: 0 5px 18px rgba(32, 63, 40, 0.04);
+}
+
+.reservation-menu__product-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.reservation-menu__product-info h4 {
+  margin: 0 0 7px;
+
+  color: #2e4d37;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.reservation-menu__product-info p {
+  margin: 0 0 12px;
+
+  color: #7e8a7c;
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+
+.reservation-menu__price {
+  display: inline-block;
+
+  color: #315c3a;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* =========================================
+   SELECTOR DE CANTIDAD
+========================================= */
+
+.reservation-menu__quantity {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  flex-shrink: 0;
+
+  padding: 6px;
+
+  background: #fff;
+  border: 1px solid #dce6d8;
+  border-radius: 50px;
+}
+
+.reservation-menu__quantity button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #eaf2e7;
+  color: #315c3a;
+
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.reservation-menu__quantity button:hover:not(:disabled) {
+  background: #315c3a;
+  color: #fff;
+  transform: scale(1.06);
+}
+
+.reservation-menu__quantity button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.reservation-menu__quantity output {
+  min-width: 20px;
+
+  color: #294b34;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================
+   SIN PRODUCTOS
+========================================= */
+
+.reservation-menu__empty {
+  padding: 30px 20px;
+
+  background: #f7f8f3;
+  border: 1px dashed #d6e2d0;
+  border-radius: 14px;
+
+  color: #788477;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* =========================================
+   PIE Y TOTAL
+========================================= */
+
+.reservation-menu__footer {
+  margin-top: 45px;
+  padding-top: 30px;
+  border-top: 1px solid #e5ebe1;
+}
+
+.reservation-menu__total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 22px 25px;
+
+  background: #edf5e9;
+  border: 1px solid #d9e7d6;
+  border-radius: 16px;
+}
+
+.reservation-menu__total > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.reservation-menu__total span {
+  color: #31583b;
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.reservation-menu__total small {
+  color: #748873;
+  font-size: 0.78rem;
+}
+
+.reservation-menu__total strong {
+  color: #294b34;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 400;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.reservation-menu__notice {
+  max-width: 550px;
+  margin: 18px auto 0;
+
+  color: #899486;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* =========================================
+   BOTONES DE CONTINUACIÓN
+========================================= */
+
+.reservation-menu__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  margin-top: 30px;
+}
+
+.reservation-menu__skip,
+.reservation-menu__continue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+  padding: 14px 26px;
+
+  border-radius: 50px;
+
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.reservation-menu__skip {
+  background: transparent;
+  border: 1px solid #b6c8b0;
+  color: #426449;
+}
+
+.reservation-menu__skip:hover {
+  background: #edf3e9;
+  border-color: #8eaa87;
+}
+
+.reservation-menu__continue {
+  background: #315c3a;
+  border: 1px solid #315c3a;
+  color: #fff;
+}
+
+.reservation-menu__continue:hover:not(:disabled) {
+  background: #24482d;
+  border-color: #24482d;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(36, 72, 45, 0.16);
+}
+
+.reservation-menu__continue:disabled {
+  background: #aab8a6;
+  border-color: #aab8a6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+.reservation-menu button:focus-visible {
+  outline: 3px solid #a4c79b;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+  .reservation-menu {
+    margin: 45px auto;
+    padding: 38px 32px;
+  }
+
+  .reservation-menu__categories {
+    gap: 38px;
+  }
+
+  .reservation-menu__product {
+    padding: 20px;
+  }
+}
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 767px) {
+  .reservation-menu {
+    margin: 35px auto;
+    padding: 30px 20px;
+    border-radius: 18px;
+  }
+
+  .reservation-menu__header {
+    margin-bottom: 35px;
+  }
+
+  .reservation-menu__eyebrow {
+    font-size: 0.66rem;
+    letter-spacing: 2px;
+  }
+
+  .reservation-menu__title {
+    font-size: clamp(1.9rem, 7vw, 2.4rem);
+  }
+
+  .reservation-menu__description {
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+  .reservation-menu__service {
+    font-size: 0.75rem;
+  }
+
+  .reservation-menu__categories {
+    gap: 32px;
+  }
+
+  .reservation-menu__product {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .reservation-menu__product-info h4 {
+    font-size: 0.96rem;
+  }
+
+  .reservation-menu__quantity {
+    align-self: flex-end;
+  }
+
+  .reservation-menu__footer {
+    margin-top: 35px;
+    padding-top: 25px;
+  }
+
+  .reservation-menu__total {
+    padding: 20px;
+  }
+
+  .reservation-menu__total strong {
+    font-size: 1.45rem;
+  }
+
+  .reservation-menu__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .reservation-menu__skip,
+  .reservation-menu__continue {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   MOVIMIENTO REDUCIDO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .reservation-menu__product,
+  .reservation-menu__quantity button,
+  .reservation-menu__skip,
+  .reservation-menu__continue {
+    transition: none;
+  }
+
+  .reservation-menu__quantity button:hover:not(:disabled),
+  .reservation-menu__continue:hover:not(:disabled) {
+    transform: none;
+  }
+}

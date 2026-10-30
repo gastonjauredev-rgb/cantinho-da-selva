@@ -1,0 +1,162 @@
+
+/* =========================================
+   CANTINHO DA SELVA
+   PRODUCTOS DESTACADOS
+========================================= */
+
+.featured-products {
+  padding: 95px 0 105px;
+  background: #ffffff;
+}
+
+.featured-products__container {
+  width: min(1320px, 100%);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 65px);
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.featured-products__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 42px;
+}
+
+.featured-products__eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #719477;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.featured-products__heading h2 {
+  margin: 0 0 14px;
+  color: #284d33;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.featured-products__heading p {
+  max-width: 540px;
+  margin: 0;
+  color: #718075;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.featured-products__view-all {
+  flex-shrink: 0;
+  padding-bottom: 7px;
+  color: #315c3b;
+  border-bottom: 1px solid #315c3b;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.featured-products__view-all:hover {
+  color: #67936e;
+}
+
+/* =========================================
+   GRILLA DE PRODUCTOS
+========================================= */
+
+.featured-products__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.featured-products__grid .product-card {
+  min-width: 0;
+  height: 100%;
+}
+
+/* =========================================
+   ESTADOS
+========================================= */
+
+.featured-products__status {
+  padding: 55px 20px;
+  border-radius: 16px;
+  background: #f4f7f2;
+  color: #607464;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.featured-products__mobile-link {
+  display: none;
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 1100px) {
+  .featured-products__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================
+   CELULARES
+========================================= */
+
+@media (max-width: 575px) {
+  .featured-products {
+    padding: 65px 0 75px;
+  }
+
+  .featured-products__heading {
+    margin-bottom: 30px;
+  }
+
+  .featured-products__heading h2 {
+    font-size: 2rem;
+  }
+
+  .featured-products__heading p {
+    font-size: 0.93rem;
+  }
+
+  .featured-products__view-all {
+    display: none;
+  }
+
+  .featured-products__grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .featured-products__mobile-link {
+    display: block;
+    margin-top: 35px;
+    text-align: center;
+  }
+
+  .featured-products__mobile-link a {
+    display: inline-block;
+    padding: 13px 25px;
+    border: 1px solid #315c3b;
+    border-radius: 10px;
+    color: #315c3b;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .featured-products__mobile-link a:hover {
+    background: #315c3b;
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,38 @@
+.plant-search {
+  margin-top: 32px;
+  padding: 24px;
+  background-color: #faf7f0;
+  border-radius: 16px;
+  color: #254b2d;
+  text-align: left;
+  box-shadow: 0 8px 28px rgb(0 0 0 / 20%);
+}
+
+.plant-search .form-label {
+  font-weight: 600;
+}
+
+.plant-search__filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.plant-search__actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+@media (max-width: 767.98px) {
+  .plant-search {
+    padding: 20px;
+  }
+
+  .plant-search__filters {
+    grid-template-columns: 1fr;
+  }
+}

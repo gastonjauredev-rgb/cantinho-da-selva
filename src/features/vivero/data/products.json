@@ -1,0 +1,219 @@
+
+[
+  {
+    "id": "prod-001",
+    "name": "Monstera deliciosa",
+    "description": "Planta tropical de hojas grandes, ideal para ambientes luminosos.",
+    "category": "interior",
+    "price": 890,
+    "stock": 12,
+    "image": "/images/products/monstera.jpg"
+  },
+  {
+    "id": "prod-002",
+    "name": "Sansevieria",
+    "description": "Planta resistente de interior, fácil de cuidar.",
+    "category": "interior",
+    "price": 650,
+    "stock": 9,
+    "image": "/images/products/sansevieria.jpg"
+  },
+  {
+    "id": "prod-003",
+    "name": "Potus",
+    "description": "Planta colgante de crecimiento vigoroso y cuidado sencillo.",
+    "category": "interior",
+    "price": 390,
+    "stock": 18,
+    "image": "/images/products/potus.jpg"
+  },
+  {
+    "id": "prod-004",
+    "name": "Ficus elastica",
+    "description": "Planta ornamental de hojas brillantes para interiores luminosos.",
+    "category": "interior",
+    "price": 990,
+    "stock": 7,
+    "image": "/images/products/ficus-elastica.jpg"
+  },
+  {
+    "id": "prod-005",
+    "name": "Lavanda",
+    "description": "Aromática de floración violeta que prefiere pleno sol.",
+    "category": "exterior",
+    "price": 290,
+    "stock": 20,
+    "image": "/images/products/lavanda.jpg"
+  },
+  {
+    "id": "prod-006",
+    "name": "Jazmín del cabo",
+    "description": "Arbusto ornamental de flores blancas perfumadas.",
+    "category": "exterior",
+    "price": 780,
+    "stock": 8,
+    "image": "/images/products/jazmin-del-cabo.jpg"
+  },
+  {
+    "id": "prod-007",
+    "name": "Hortensia",
+    "description": "Planta de floración vistosa para espacios de semisombra.",
+    "category": "exterior",
+    "price": 690,
+    "stock": 10,
+    "image": "/images/products/hortensia.jpg"
+  },
+  {
+    "id": "prod-008",
+    "name": "Rosal",
+    "description": "Rosal ornamental para jardines y patios soleados.",
+    "category": "exterior",
+    "price": 450,
+    "stock": 16,
+    "image": "/images/products/rosal.jpg"
+  },
+  {
+    "id": "prod-009",
+    "name": "Limonero",
+    "description": "Cítrico para jardín con buena exposición solar.",
+    "category": "frutales",
+    "price": 1450,
+    "stock": 5,
+    "image": "/images/products/limonero.jpg"
+  },
+  {
+    "id": "prod-010",
+    "name": "Mandarino",
+    "description": "Árbol cítrico para cultivo en tierra o maceta grande.",
+    "category": "frutales",
+    "price": 1390,
+    "stock": 6,
+    "image": "/images/products/mandarino.jpg"
+  },
+  {
+    "id": "prod-011",
+    "name": "Naranjo",
+    "description": "Frutal cítrico para espacios exteriores soleados.",
+    "category": "frutales",
+    "price": 1490,
+    "stock": 4,
+    "image": "/images/products/naranjo.jpg"
+  },
+  {
+    "id": "prod-012",
+    "name": "Higuera",
+    "description": "Árbol frutal de hoja caduca para jardines.",
+    "category": "frutales",
+    "price": 1190,
+    "stock": 7,
+    "image": "/images/products/higuera.jpg"
+  },
+  {
+    "id": "prod-013",
+    "name": "Maceta de cerámica",
+    "description": "Maceta decorativa para plantas de interior.",
+    "category": "macetas",
+    "price": 490,
+    "stock": 15,
+    "image": "/images/products/maceta-ceramica.jpg"
+  },
+  {
+    "id": "prod-014",
+    "name": "Maceta de barro",
+    "description": "Maceta clásica de terracota para múltiples especies.",
+    "category": "macetas",
+    "price": 350,
+    "stock": 22,
+    "image": "/images/products/maceta-barro.jpg"
+  },
+  {
+    "id": "prod-015",
+    "name": "Jardinera rectangular",
+    "description": "Jardinera ideal para balcones y terrazas.",
+    "category": "macetas",
+    "price": 790,
+    "stock": 11,
+    "image": "/images/products/jardinera-rectangular.jpg"
+  },
+  {
+    "id": "prod-016",
+    "name": "Maceta colgante",
+    "description": "Maceta para exhibir plantas colgantes.",
+    "category": "macetas",
+    "price": 420,
+    "stock": 14,
+    "image": "/images/products/maceta-colgante.jpg"
+  },
+  {
+    "id": "prod-017",
+    "name": "Sustrato universal",
+    "description": "Mezcla de cultivo de uso general.",
+    "category": "sustratos",
+    "price": 320,
+    "stock": 25,
+    "image": "/images/products/sustrato-universal.jpg"
+  },
+  {
+    "id": "prod-018",
+    "name": "Compost orgánico",
+    "description": "Enmienda orgánica para mejorar el suelo.",
+    "category": "sustratos",
+    "price": 280,
+    "stock": 30,
+    "image": "/images/products/compost-organico.jpg"
+  },
+  {
+    "id": "prod-019",
+    "name": "Humus de lombriz",
+    "description": "Abono orgánico para plantas y huertas.",
+    "category": "sustratos",
+    "price": 390,
+    "stock": 19,
+    "image": "/images/products/humus-lombriz.jpg"
+  },
+  {
+    "id": "prod-020",
+    "name": "Perlita para sustratos",
+    "description": "Material liviano para mejorar aireación y drenaje.",
+    "category": "sustratos",
+    "price": 250,
+    "stock": 24,
+    "image": "/images/products/perlita.jpg"
+  },
+  {
+    "id": "prod-021",
+    "name": "Kit de herramientas de jardín",
+    "description": "Juego básico para plantar y mantener macetas.",
+    "category": "herramientas",
+    "price": 790,
+    "stock": 10,
+    "image": "/images/products/kit-herramientas.jpg"
+  },
+  {
+    "id": "prod-022",
+    "name": "Regadera",
+    "description": "Regadera manual para riego de plantas.",
+    "category": "herramientas",
+    "price": 590,
+    "stock": 13,
+    "image": "/images/products/regadera.jpg"
+  },
+  {
+    "id": "prod-023",
+    "name": "Tijera de poda",
+    "description": "Tijera para mantenimiento y poda ligera.",
+    "category": "herramientas",
+    "price": 680,
+    "stock": 12,
+    "image": "/images/products/tijera-poda.jpg"
+  },
+  {
+    "id": "prod-024",
+    "name": "Pulverizador manual",
+    "description": "Pulverizador para humedecer hojas y aplicar agua.",
+    "category": "herramientas",
+    "price": 290,
+    "stock": 21,
+    "image": "/images/products/pulverizador.jpg"
+  }
+]

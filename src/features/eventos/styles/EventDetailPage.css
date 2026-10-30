@@ -1,0 +1,642 @@
+
+/* =========================================
+   CANTINHO DA SELVA
+   DETALLE DE EVENTOS
+========================================= */
+
+.event-detail {
+  min-height: 100vh;
+  background: #fafaf6;
+  color: #263e2d;
+}
+
+.event-detail__container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.event-detail__hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 520px;
+  overflow: hidden;
+  background: #193c28;
+  color: #ffffff;
+}
+
+.event-detail__hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-detail__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(12, 35, 23, 0.92) 0%,
+    rgba(12, 35, 23, 0.72) 45%,
+    rgba(12, 35, 23, 0.24) 100%
+  );
+}
+
+.event-detail__hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 100px 0 75px;
+}
+
+.event-detail__back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #e5eedc;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.event-detail__back-link:hover {
+  color: #ffffff;
+}
+
+.event-detail__back-link:focus-visible {
+  outline: 3px solid #b4d4a5;
+  outline-offset: 5px;
+}
+
+.event-detail__category {
+  display: table;
+  margin: 42px 0 18px;
+  padding: 9px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(8px);
+}
+
+.event-detail__hero h1 {
+  max-width: 850px;
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: clamp(2.7rem, 5.4vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+
+.event-detail__hero-content > p {
+  max-width: 670px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+
+.event-detail__main {
+  padding: 85px 0 115px;
+}
+
+.event-detail__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  align-items: start;
+  gap: 65px;
+}
+
+.event-detail__information {
+  min-width: 0;
+}
+
+/* =========================================
+   INFORMACIÓN GENERAL
+========================================= */
+
+.event-detail__metadata {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 70px;
+  padding: 26px;
+  border: 1px solid #e3e9df;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.event-detail__metadata-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.event-detail__metadata-item > span {
+  color: #7d9580;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.event-detail__metadata-item > strong {
+  color: #284b34;
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.event-detail__section {
+  margin-bottom: 60px;
+}
+
+.event-detail__eyebrow {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #6e956b;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.event-detail__section h2 {
+  margin: 0 0 22px;
+  color: #1d402c;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.event-detail__section > p {
+  max-width: 720px;
+  margin: 0;
+  color: #68776b;
+  font-size: 1rem;
+  line-height: 1.95;
+}
+
+/* =========================================
+   INCLUYE
+========================================= */
+
+.event-detail__includes {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.event-detail__includes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  color: #4d6453;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.event-detail__includes li span {
+  display: flex;
+  flex: 0 0 26px;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #e4efdf;
+  color: #35643d;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+/* =========================================
+   AVISO DE EVENTO FICTICIO
+========================================= */
+
+.event-detail__fictional-notice {
+  padding: 22px 25px;
+  border: 1px solid #e8dcb7;
+  border-radius: 15px;
+  background: #fff9e9;
+}
+
+.event-detail__fictional-notice strong {
+  display: block;
+  margin-bottom: 9px;
+  color: #775923;
+  font-size: 0.94rem;
+}
+
+.event-detail__fictional-notice p {
+  margin: 0;
+  color: #796a4b;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   PANEL DE RESERVAS
+========================================= */
+
+.event-detail__sidebar {
+  min-width: 0;
+}
+
+.event-detail__booking {
+  position: sticky;
+  top: 105px;
+  padding: 30px;
+  border: 1px solid #e4eae0;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 15px 45px rgba(25, 54, 33, 0.08);
+}
+
+.event-detail__booking h2 {
+  margin: 0 0 12px;
+  color: #1d402c;
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.event-detail__booking-description {
+  margin: 0 0 28px;
+  color: #718075;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+/* =========================================
+   DISPONIBILIDAD
+========================================= */
+
+.event-detail__availability {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 13px 0;
+  border-bottom: 1px solid #edf0e9;
+}
+
+.event-detail__availability span {
+  color: #758276;
+  font-size: 0.85rem;
+}
+
+.event-detail__availability strong {
+  color: #2b5236;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+/* =========================================
+   SELECTOR DE ENTRADAS
+========================================= */
+
+.event-detail__quantity-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 28px 0;
+}
+
+.event-detail__quantity-section h3 {
+  margin: 0 0 6px;
+  color: #284c33;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.event-detail__quantity-section p {
+  margin: 0;
+  color: #778477;
+  font-size: 0.82rem;
+}
+
+.event-detail__quantity-controls {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #dce5d8;
+  border-radius: 11px;
+  background: #ffffff;
+}
+
+.event-detail__quantity-controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: #f1f5ee;
+  color: #315c3a;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.event-detail__quantity-controls button:hover:not(:disabled) {
+  background: #dfeadd;
+}
+
+.event-detail__quantity-controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.event-detail__quantity-controls button:focus-visible {
+  outline: 2px solid #315c3a;
+  outline-offset: -2px;
+}
+
+.event-detail__quantity-controls output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 43px;
+  height: 40px;
+  color: #284b34;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+/* =========================================
+   OPCIÓN DE CENA
+========================================= */
+
+.event-detail__dinner-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-bottom: 26px;
+  padding: 18px;
+  border: 1px solid #dce8d8;
+  border-radius: 14px;
+  background: #f4f8f1;
+  cursor: pointer;
+}
+
+.event-detail__dinner-option input {
+  flex-shrink: 0;
+  width: 19px;
+  height: 19px;
+  margin: 2px 0 0;
+  accent-color: #315c3a;
+  cursor: pointer;
+}
+
+.event-detail__dinner-option span {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.event-detail__dinner-option strong {
+  color: #294c34;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.event-detail__dinner-option small {
+  color: #708173;
+  font-size: 0.78rem;
+  line-height: 1.65;
+}
+
+/* =========================================
+   TOTAL
+========================================= */
+
+.event-detail__total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 26px 0 18px;
+  padding-top: 24px;
+  border-top: 1px solid #e4eae0;
+}
+
+.event-detail__total span {
+  color: #4b6252;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.event-detail__total strong {
+  color: #20462c;
+  font-size: 1.65rem;
+  font-weight: 800;
+}
+
+/* =========================================
+   PAGO Y CONFIRMACIÓN
+========================================= */
+
+.event-detail__payment-note {
+  margin: 0 0 22px;
+  color: #788479;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.event-detail__reserve-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 17px 20px;
+  border: 0;
+  border-radius: 12px;
+  background: #315c3a;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.94rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.event-detail__reserve-button:hover:not(:disabled) {
+  background: #42774c;
+}
+
+.event-detail__reserve-button:disabled {
+  background: #a4b5a5;
+  cursor: not-allowed;
+}
+
+.event-detail__reserve-button:focus-visible {
+  outline: 3px solid #8daf82;
+  outline-offset: 3px;
+}
+
+.event-detail__reserve-button span {
+  font-size: 1.25rem;
+}
+
+.event-detail__demo-note {
+  margin: 16px 0 0;
+  color: #879188;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.event-detail__sold-out {
+  margin: 25px 0 0;
+  padding: 18px;
+  border-radius: 12px;
+  background: #f9ece8;
+  color: #8c4438;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* =========================================
+   EVENTO NO ENCONTRADO
+========================================= */
+
+.event-detail--not-found {
+  display: flex;
+  align-items: center;
+  min-height: 65vh;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.event-detail--not-found h1 {
+  margin: 0 0 20px;
+  color: #21452d;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.event-detail--not-found p {
+  margin: 0 0 28px;
+  color: #718075;
+  line-height: 1.8;
+}
+
+.event-detail--not-found .event-detail__back-link {
+  color: #315c3a;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+  .event-detail__layout {
+    grid-template-columns: minmax(0, 1fr) 350px;
+    gap: 35px;
+  }
+
+  .event-detail__booking {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .event-detail__layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .event-detail__booking {
+    position: static;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .event-detail__metadata {
+    margin-bottom: 55px;
+  }
+}
+
+@media (max-width: 600px) {
+  .event-detail__container,
+  .event-detail__hero-content {
+    width: min(100% - 36px, 1200px);
+  }
+
+  .event-detail__hero {
+    min-height: 470px;
+  }
+
+  .event-detail__hero-content {
+    padding: 85px 0 55px;
+  }
+
+  .event-detail__hero h1 {
+    font-size: clamp(2.4rem, 9vw, 3.3rem);
+  }
+
+  .event-detail__hero-content > p {
+    font-size: 0.94rem;
+  }
+
+  .event-detail__main {
+    padding: 55px 0 80px;
+  }
+
+  .event-detail__metadata {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    padding: 23px;
+    margin-bottom: 50px;
+  }
+
+  .event-detail__section {
+    margin-bottom: 45px;
+  }
+
+  .event-detail__booking {
+    padding: 23px 20px;
+  }
+
+  .event-detail__total strong {
+    font-size: 1.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-detail__back-link,
+  .event-detail__quantity-controls button,
+  .event-detail__reserve-button {
+    transition: none;
+  }
+}

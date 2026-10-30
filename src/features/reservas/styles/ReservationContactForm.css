@@ -1,0 +1,355 @@
+
+/* =========================================
+   CANTINHO DA SELVA
+   FORMULARIO DE DATOS PERSONALES
+========================================= */
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.reservation-contact {
+  width: min(850px, 100%);
+  margin: 55px auto;
+  padding: clamp(28px, 5vw, 55px);
+
+  background: #fffdf9;
+  border: 1px solid #e4e9dd;
+  border-radius: 24px;
+
+  box-shadow:
+    0 16px 45px rgba(32, 63, 40, 0.05),
+    0 3px 12px rgba(32, 63, 40, 0.03);
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.reservation-contact__header {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.reservation-contact__eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+
+  color: #a0835d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.reservation-contact__title {
+  margin: 0 0 20px;
+
+  color: #294b34;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.reservation-contact__description {
+  max-width: 530px;
+  margin: 0 auto;
+
+  color: #788477;
+  font-size: 0.96rem;
+  line-height: 1.85;
+}
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.reservation-contact__form {
+  width: 100%;
+}
+
+.reservation-contact__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 22px;
+}
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.reservation-contact__field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.reservation-contact__field--full {
+  grid-column: 1 / -1;
+}
+
+.reservation-contact__field label {
+  margin-bottom: 10px;
+
+  color: #385541;
+  font-size: 0.87rem;
+  font-weight: 600;
+}
+
+.reservation-contact__field input,
+.reservation-contact__field textarea {
+  display: block;
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 16px;
+
+  border: 1px solid #dce4d8;
+  border-radius: 12px;
+
+  background: #fff;
+  color: #294b34;
+
+  font: inherit;
+  font-size: 0.92rem;
+  line-height: 1.5;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.reservation-contact__field textarea {
+  min-height: 125px;
+  resize: vertical;
+}
+
+.reservation-contact__field input::placeholder,
+.reservation-contact__field textarea::placeholder {
+  color: #a4afa1;
+}
+
+/* =========================================
+   INTERACCIÓN
+========================================= */
+
+.reservation-contact__field input:hover,
+.reservation-contact__field textarea:hover {
+  border-color: #a7bca4;
+}
+
+.reservation-contact__field input:focus,
+.reservation-contact__field textarea:focus {
+  border-color: #648b68;
+  background: #fff;
+
+  box-shadow: 0 0 0 4px rgba(100, 139, 104, 0.12);
+}
+
+/* =========================================
+   ERRORES
+========================================= */
+
+.reservation-contact__field input[aria-invalid='true'],
+.reservation-contact__field textarea[aria-invalid='true'] {
+  border-color: #bf6b63;
+  background: #fffafa;
+}
+
+.reservation-contact__field input[aria-invalid='true']:focus,
+.reservation-contact__field textarea[aria-invalid='true']:focus {
+  box-shadow: 0 0 0 4px rgba(191, 107, 99, 0.12);
+}
+
+.reservation-contact__error {
+  display: block;
+  margin-top: 8px;
+
+  color: #a54d47;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+/* =========================================
+   TEXTOS DE AYUDA
+========================================= */
+
+.reservation-contact__help {
+  display: block;
+  margin-top: 9px;
+
+  color: #849082;
+  font-size: 0.77rem;
+  line-height: 1.6;
+}
+
+/* =========================================
+   PIE DEL FORMULARIO
+========================================= */
+
+.reservation-contact__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  margin-top: 38px;
+  padding-top: 30px;
+
+  border-top: 1px solid #e8ede5;
+}
+
+.reservation-contact__privacy {
+  max-width: 530px;
+  margin: 0;
+
+  color: #829080;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* =========================================
+   BOTÓN CONTINUAR
+========================================= */
+
+.reservation-contact__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  min-height: 54px;
+  padding: 15px 32px;
+
+  border: 1px solid #315c3a;
+  border-radius: 50px;
+
+  background: #315c3a;
+  color: #fff;
+
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.reservation-contact__submit:hover {
+  background: #24482d;
+  border-color: #24482d;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(36, 72, 45, 0.16);
+}
+
+.reservation-contact__submit:active {
+  transform: translateY(0);
+}
+
+.reservation-contact__submit:focus-visible {
+  outline: 3px solid #a4c79b;
+  outline-offset: 4px;
+}
+
+.reservation-contact__submit span {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+  .reservation-contact {
+    margin: 45px auto;
+    padding: 38px 32px;
+  }
+
+  .reservation-contact__grid {
+    gap: 22px 18px;
+  }
+}
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 767px) {
+  .reservation-contact {
+    margin: 35px auto;
+    padding: 30px 20px;
+
+    border-radius: 18px;
+  }
+
+  .reservation-contact__header {
+    margin-bottom: 30px;
+  }
+
+  .reservation-contact__eyebrow {
+    font-size: 0.66rem;
+    letter-spacing: 2px;
+  }
+
+  .reservation-contact__title {
+    font-size: clamp(1.85rem, 7vw, 2.3rem);
+  }
+
+  .reservation-contact__description {
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+  .reservation-contact__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .reservation-contact__field--full {
+    grid-column: auto;
+  }
+
+  .reservation-contact__field input,
+  .reservation-contact__field textarea {
+    font-size: 1rem;
+  }
+
+  .reservation-contact__footer {
+    margin-top: 30px;
+    padding-top: 25px;
+  }
+
+  .reservation-contact__submit {
+    width: 100%;
+    padding: 15px 20px;
+  }
+}
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .reservation-contact__field input,
+  .reservation-contact__field textarea,
+  .reservation-contact__submit {
+    transition: none;
+  }
+
+  .reservation-contact__submit:hover {
+    transform: none;
+  }
+}

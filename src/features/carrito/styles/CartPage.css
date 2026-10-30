@@ -1,0 +1,497 @@
+
+/* =========================================
+   CANTINHO DA SELVA
+   CARRITO DE COMPRAS
+========================================= */
+
+.cart-page {
+  min-height: 80vh;
+  background: #f8faf7;
+  color: #263b2d;
+}
+
+.cart-page .container {
+  max-width: 1200px;
+}
+
+/* =========================================
+   NAVEGACIÓN
+========================================= */
+
+.cart-page__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 35px;
+  font-size: 0.88rem;
+  color: #79877c;
+}
+
+.cart-page__breadcrumb a {
+  color: #507458;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cart-page__breadcrumb a:hover {
+  color: #254c32;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.cart-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+  margin-bottom: 38px;
+}
+
+.cart-page__eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  color: #789b78;
+}
+
+.cart-page__header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2.1rem, 4vw, 3.1rem);
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  color: #24462f;
+}
+
+.cart-page__header p {
+  margin: 0;
+  color: #7c897f;
+  font-size: 0.96rem;
+}
+
+.cart-page__clear {
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  color: #9b6763;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.cart-page__clear:hover {
+  color: #b13d37;
+}
+
+/* =========================================
+   ESTRUCTURA PRINCIPAL
+========================================= */
+
+.cart-page__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  align-items: start;
+  gap: 30px;
+}
+
+.cart-page__items {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+/* =========================================
+   TARJETAS DE PRODUCTOS
+========================================= */
+
+.cart-page__item {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 24px;
+  padding: 22px;
+  border: 1px solid #e8eee7;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 8px 28px rgba(32, 65, 41, 0.035);
+}
+
+.cart-page__item-image {
+  display: block;
+  overflow: hidden;
+  width: 145px;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  background: #edf2eb;
+}
+
+.cart-page__item-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.cart-page__item-image:hover img {
+  transform: scale(1.06);
+}
+
+.cart-page__item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.cart-page__item-name {
+  margin-bottom: 8px;
+  color: #2a4833;
+  font-size: 1.13rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.cart-page__item-name:hover {
+  color: #668f62;
+}
+
+.cart-page__item-price {
+  margin: 0 0 7px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #365c3e;
+}
+
+.cart-page__item-stock {
+  margin: 0 0 18px;
+  color: #8b988e;
+  font-size: 0.8rem;
+}
+
+/* =========================================
+   SELECTOR DE CANTIDAD
+========================================= */
+
+.cart-page__quantity {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  height: 40px;
+  border: 1px solid #dce6dc;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.cart-page__quantity button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #365b3f;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cart-page__quantity button:hover:not(:disabled) {
+  background: #edf5eb;
+}
+
+.cart-page__quantity button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.cart-page__quantity output {
+  min-width: 36px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2e4834;
+}
+
+.cart-page__remove {
+  margin-top: 14px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #9c6b67;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.cart-page__remove:hover {
+  color: #ba4941;
+}
+
+/* =========================================
+   SUBTOTAL POR PRODUCTO
+========================================= */
+
+.cart-page__item-total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.cart-page__item-total span {
+  color: #93a096;
+  font-size: 0.78rem;
+}
+
+.cart-page__item-total strong {
+  color: #2b4934;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* =========================================
+   RESUMEN DEL PEDIDO
+========================================= */
+
+.cart-page__summary {
+  position: sticky;
+  top: 110px;
+  padding: 28px;
+  border: 1px solid #e4ebe2;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(32, 65, 41, 0.045);
+}
+
+.cart-page__summary h2 {
+  margin: 0 0 27px;
+  color: #2a4732;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.cart-page__summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 19px;
+  color: #69796e;
+  font-size: 0.92rem;
+}
+
+.cart-page__summary-row span:last-child {
+  color: #344b3b;
+  font-weight: 600;
+}
+
+.cart-page__summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+  padding-top: 23px;
+  border-top: 1px solid #e7ede5;
+  color: #2c4835;
+  font-size: 0.95rem;
+}
+
+.cart-page__summary-total strong {
+  font-size: 1.55rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cart-page__summary-note {
+  margin: 20px 0 25px;
+  color: #93a095;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.cart-page__checkout,
+.cart-page__primary-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 12px;
+  background: #315c3b;
+  color: #fff;
+  font-size: 0.94rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cart-page__primary-button:hover {
+  background: #244a2e;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.cart-page__checkout:disabled {
+  background: #aebdaf;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.cart-page__checkout-note {
+  margin: 12px 0 0;
+  color: #9aa79b;
+  font-size: 0.76rem;
+  text-align: center;
+}
+
+.cart-page__continue {
+  display: block;
+  margin-top: 24px;
+  color: #4f7657;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cart-page__continue:hover {
+  color: #274e30;
+}
+
+/* =========================================
+   CARRITO VACÍO
+========================================= */
+
+.cart-page__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 550px;
+  margin: 60px auto 90px;
+  padding: 55px 30px;
+  text-align: center;
+}
+
+.cart-page__empty-icon {
+  display: grid;
+  place-items: center;
+  width: 105px;
+  height: 105px;
+  margin-bottom: 28px;
+  border-radius: 50%;
+  background: #e9f1e6;
+  font-size: 3.1rem;
+}
+
+.cart-page__empty h1 {
+  margin-bottom: 16px;
+  color: #284932;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.cart-page__empty p {
+  max-width: 400px;
+  margin-bottom: 30px;
+  color: #819084;
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.cart-page__empty .cart-page__primary-button {
+  width: auto;
+  min-width: 220px;
+}
+
+/* =========================================
+   RESPONSIVE - TABLETS
+========================================= */
+
+@media (max-width: 991px) {
+  .cart-page__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-page__summary {
+    position: static;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MÓVILES
+========================================= */
+
+@media (max-width: 575px) {
+  .cart-page__header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .cart-page__header h1 {
+    font-size: 2.1rem;
+  }
+
+  .cart-page__clear {
+    flex-shrink: 0;
+    font-size: 0.8rem;
+  }
+
+  .cart-page__item {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 16px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .cart-page__item-image {
+    width: 100px;
+  }
+
+  .cart-page__item-name {
+    font-size: 1rem;
+  }
+
+  .cart-page__item-stock {
+    margin-bottom: 12px;
+  }
+
+  .cart-page__item-total {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #edf1eb;
+  }
+
+  .cart-page__summary {
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .cart-page__empty {
+    margin: 30px auto 60px;
+    padding: 40px 10px;
+  }
+}

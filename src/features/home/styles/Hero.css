@@ -1,0 +1,39 @@
+.home-hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+
+  background-image:
+    linear-gradient(rgb(0 0 0 / 35%), rgb(0 0 0 / 35%)),
+    url('/hero-cantinho.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-hero__content {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.home-hero__content h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+}
+
+.home-hero__content p {
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+@media (max-width: 575.98px) {
+  .home-hero {
+    min-height: 60vh;
+    padding: 48px 16px;
+  }
+}
